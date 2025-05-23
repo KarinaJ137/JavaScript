@@ -25,3 +25,14 @@
     Equality = I1 < I2;
     console.log(Equality);
 }
+{
+    //Дано трехзначное число. Определить, равен ли квадрат этого числа сумме кубов его цифр.
+    let number1, h1, h2, h3, square, sumCubes;
+    number1 = parseInt(prompt("Введите число"));
+    h1 = number % 10;
+    h2 = Math.floor(number/10) % 10;
+    h3 = Math.floor(number/100) % 10;
+    square = number1 * number1;
+    sumCubes = Math.pow(h1, 3) + Math.pow(h2, 3) + Math.pow(h3, 3);
+    if (square == sumCubes)
+}

@@ -36,5 +36,26 @@ console.log(mul);
 }
 
 {
-    
+    //Найти максимум из двух чисел
+    let x, y, max;
+    x = parseFloat(prompt("Введеите первое число"));
+    y = parseFloat(prompt("Введеите второе число"));
+    if (x > y){
+        max = x;
+    }
+    else{
+        max = y;
+    }
+    alert("max =" + max);
+}
+{
+    //Второй способ решения
+    let x, y, max;
+    x = parseFloat(prompt("Введеите первое число"));
+    y = parseFloat(prompt("Введеите второе число"));
+    max = x;
+    if (y > max){
+        max = y;
+    }
+    alert("max =" + max);
 }
