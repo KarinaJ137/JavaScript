@@ -35,27 +35,60 @@ console.log(mul);
     // console.log(d1, d2, d3, d4);
 }
 
+// {
+//     //Первый способ, найти максимум из трех чисел
+//     let x, y, max;
+//     x = parseFloat(prompt("Введеите первое число"));
+//     y = parseFloat(prompt("Введеите второе число"));
+//     z = parseFloat(prompt("Введеите третье число"));
+//     if (x >= y && x >= z){
+//         max = x;
+//     }
+//     else if(y >= x && y >=z){
+//         max = y;
+//     }
+//     else{
+//         max = z;
+//     }
+//     alert("max =" + max);
+// }
+// {
+//     //Второй способ решения, найти максимум из трех чисел
+//     let x, y, max;
+//     x = parseFloat(prompt("Введеите первое число"));
+//     y = parseFloat(prompt("Введеите второе число"));
+//     max = x;
+//     if (y > max){
+//         max = y;
+//     }
+//     if (z > max){
+//         max = z;
+//     }
+//     alert("max =" + max);
+// }
 {
-    //Найти максимум из двух чисел
-    let x, y, max;
-    x = parseFloat(prompt("Введеите первое число"));
-    y = parseFloat(prompt("Введеите второе число"));
-    if (x > y){
-        max = x;
+    //Данны n натуральных чисел. Найти максимум среди них
+    let n, a, max;
+    n = parseInt(prompt("Введите кол-во чисел"));
+    max = parseInt(prompt("Введите число"));
+    for(let i = 1; i < n; i++){
+        a = parseInt(prompt("Введите число"))
+        if (a > max){
+            max = a;
+        }
     }
-    else{
-        max = y;
-    }
-    alert("max =" + max);
+    alert("max = " + max)
 }
 {
-    //Второй способ решения
-    let x, y, max;
-    x = parseFloat(prompt("Введеите первое число"));
-    y = parseFloat(prompt("Введеите второе число"));
-    max = x;
-    if (y > max){
-        max = y;
+    //Данна последовательность натуральных чисел, которая закнчивается вводом числа ноль. Найти максимум среди этой последовательности.
+    let  a, max;
+    a = parseInt(prompt("Введите число"));
+    max = a;
+    while(a != 0){
+        a = parseInt(prompt("Введите число"))
+        if (a > max){
+            max = a;
+        }
     }
-    alert("max =" + max);
+    alert("max = " + max)
 }
