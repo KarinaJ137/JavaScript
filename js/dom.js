@@ -10,8 +10,8 @@ const links = document.querySelectorAll("a");
 console.log(links);
 
 //2 - работа с контентом (содержимым тегов)
-console.log(h1.textContent); //Чтение содержимого, чтение содержимого без тегов
-console.log(h1.innerHTML); //Чтение содержимого, чтение содержимого с тегами
+console.log(h1.textContent); //Чтение содержимого без тегов
+console.log(h1.innerHTML); //Чтение содержимого с тегами
 console.log(h1.innerText); // Свойства
 console.log(h1.outerHTML);
 console.log(h1.outerText);
