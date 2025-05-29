@@ -25,4 +25,30 @@ btnRemove.addEventListener("click", function(){
     console.log(tasks);
 })
 
+const btn1 = document.getElementById("sort1");
+function compare (a, b) {
+    if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return 1;
+    if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML) return 0;
+    if (a.querySelector("span").innerHTML < b.querySelector("span").innerHTML) return -1;
+}
 
+btn1.addEventListener("click", function(){
+    let newTasks = [...tasks].sort(compare);
+    for (let i in newTasks){
+        container.append(newTasks[i]);
+    }
+})
+
+const btn2 = document.getElementById("sort2");
+function compareRevers (a, b) {
+    if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return 1;
+    if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML) return 0;
+    if (a.querySelector("span").innerHTML < b.querySelector("span").innerHTML) return -1;
+}
+
+btn2.addEventListener("click", function(){
+    let newTasks = [...tasks].sort(compareRevers);
+    for (let i in newTasks){
+        container.append(newTasks[i]);
+    }
+})

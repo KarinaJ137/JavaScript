@@ -26,7 +26,7 @@ body {
     border:  1px solid hsl(224, 100%, 74%);
     border-radius: 20px;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .task {
@@ -43,3 +43,6 @@ body {
     margin-left: 10px;
 }
 
+.btns {
+    margin-top: 10px;
+}
