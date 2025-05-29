@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(240, 100%, 91%);
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#form-create-task {
+    width: 300px;
+    border:  1px solid hsl(224, 100%, 74%);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.container {
+    border:  1px solid hsl(224, 100%, 74%);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.task {
+    border:  1px solid hsl(224, 100%, 74%);
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.immediate::after{ 
+    content: "!";
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
