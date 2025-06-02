@@ -119,3 +119,12 @@ btnText.addEventListener("click", function(){
         container.append(newTasks[i]);
     }
 })
+
+
+let btn1Remove = document.querySelectorAll(".btn--remove");
+let newTasks = [...tasks];
+container.innerHTML = "";
+for (let i in newTasks){
+    container.append(newTasks[i]);
+}
+
