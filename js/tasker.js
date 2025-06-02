@@ -1,10 +1,9 @@
 const container = document.querySelector(".container");
 const btnCreat = document.getElementById("btn-create-task");
 const newTask = document.getElementById("new-task");
-
-//const tasks = container.childNodes; // колекция живая
 let tasks = document.querySelectorAll(".task");
 
+//const tasks = container.childNodes; // колекция живая
 //добавление новой задачи
 btnCreat.addEventListener("click", function(event){
     event.preventDefault();//отменяем повдение по умолчанию - форма не обнавляет страницу
@@ -65,6 +64,7 @@ container.addEventListener("click", (event)=>{
 
 
 
+
 const btnSort1 = document.getElementById("sort1");
 function compare (a, b) {
     if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return 1;
@@ -73,23 +73,49 @@ function compare (a, b) {
 }
 
 btnSort1.addEventListener("click", function(){
-    let newTasks = [...tasks].sort1(compare);
+   
+    let newTasks = [...tasks].sort(compare);
+
     for (let i in newTasks){
         container.append(newTasks[i]);
     }
 })
-
-const btn2 = document.getElementById("sort2");
+let tasksSort2 = document.querySelectorAll(".task");
+const btnSort2 = document.getElementById("sort2");
 function compareRevers (a, b) {
-    if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return 1;
+    if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return -1;
     if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML) return 0;
-    if (a.querySelector("span").innerHTML < b.querySelector("span").innerHTML) return -1;
+    if (a.querySelector("span").innerHTML < b.querySelector("span").innerHTML) return 1;
 }
 
-btn2.addEventListener("click", function(){
-    let newTasks = [...tasks].sort2(compareRevers);
+btnSort2.addEventListener("click", function(){
+    let newTasks = [...tasks].sort(compareRevers);
     for (let i in newTasks){
         container.append(newTasks[i]);
     }
 })
 
+const agrent = document.getElementById("agrent")
+agrent.addEventListener("click", function(){
+    let newTasks = [...tasks];
+    newTasks = newTasks.filter(task => task.classList.contains("immediate"));
+    container.innerHTML = "";
+    for (let i in newTasks){
+        container.append(newTasks[i]);
+    }
+})
+
+const textInput = document.getElementById("text-input");
+const btnText = document.getElementById("filterfilter");
+btnText.addEventListener("click", function(){
+    let value = textInput.value;
+    console.log(value);
+    let newTasks = [...tasks];
+    newTasks = newTasks.filter(function(item){
+        return item.innerHTML.indexOf(value) !=-1;
+    });
+    container.innerHTML = "";
+    for (let i in newTasks){
+        container.append(newTasks[i]);
+    }
+})
