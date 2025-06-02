@@ -46,3 +46,17 @@ body {
 .btns {
     margin-top: 10px;
 }
+
+.btn-edit,
+.btn-remove{
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-edit:hover,
+.btn-edit:focus,
+.btn-remove:hover,
+.btn-remove:focus{
+    color: rgb(71, 71, 255);
+}
